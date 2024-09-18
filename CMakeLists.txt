@@ -17,29 +17,30 @@ target_include_directories(app PRIVATE src)
 target_sources(app PRIVATE src/uut/uut.c)
 target_include_directories(app PRIVATE ./src/uut)
 
-if (NOT CONFIG_TEST)
+if (NOT CONFIG_UNITY)
 
 # add main
 target_sources(app PRIVATE src/main.c)
 
 else()
 
-# generate runner for the test
-test_runner_generate(tests/example_test.c)
-target_include_directories(app PRIVATE ./tests)
+add_subdirectory(src/uut/tests)
 
-# create mock for foo module. Add header to relative path 'foo'. That is to
-# allow including header using <foo/foo.h>
-cmock_handle(src/foo/foo.h foo)
+# generate runner for the test
+test_runner_generate(tests/test_main.c)
+
+# # create mock for foo module. Add header to relative path 'foo'. That is to
+# # allow including header using <foo/foo.h>
+# cmock_handle(src/foo/foo.h foo)
 
 # add test file
-target_sources(app PRIVATE tests/example_test.c)
-target_include_directories(app PRIVATE .)
-target_include_directories(app PRIVATE src/foo)
+target_sources(app PRIVATE tests/test_main.c)
+# target_include_directories(app PRIVATE .)
+# target_include_directories(app PRIVATE src/foo)
 
-# Preinclude file to the module under test to redefine IS_ENABLED() macro
-# which is used in the module.
-set_property(SOURCE src/uut/uut.c PROPERTY COMPILE_FLAGS
-	"-include tests/example_test.h")
+# # Preinclude file to the module under test to redefine IS_ENABLED() macro
+# # which is used in the module.
+# set_property(SOURCE src/uut/uut.c PROPERTY COMPILE_FLAGS
+# 	"-include tests/example_test.h")
 
 endif()
