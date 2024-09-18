@@ -1,5 +1,8 @@
 find_package(Zephyr REQUIRED HINTS $ENV{ZEPHYR_BASE})
 
+# generate runner for the test
+test_runner_generate(test_main.c)
+
 # create mock for foo module. Add header to relative path 'foo'. That is to
 # allow including header using <foo/foo.h>
 cmock_handle(src/foo/foo.h foo)
