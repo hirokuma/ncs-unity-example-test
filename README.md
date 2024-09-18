@@ -1,5 +1,7 @@
 # ncs-unity-example-test
 
+[original](https://github.com/nrfconnect/sdk-nrf/tree/v2.6.1/tests/unity/example_test)
+
 ## Run
 
 ```console
