@@ -3,10 +3,11 @@
  *
  * SPDX-License-Identifier: LicenseRef-Nordic-5-Clause
  */
-#include <uut.h>
-#include <foo/foo.h>
 #include <zephyr/sys/util.h>
 #include <stddef.h>
+
+#include "foo/foo.h"
+#include "uut.h"
 
 int uut_init(void *handle)
 {

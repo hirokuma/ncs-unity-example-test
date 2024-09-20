@@ -4,9 +4,10 @@
  * SPDX-License-Identifier: LicenseRef-Nordic-5-Clause
  */
 #include <unity.h>
-#include <uut.h>
 #include <stdbool.h>
-#include "foo/cmock_foo.h"
+
+#include "uut.h"
+#include "cmock_foo.h"
 
 bool runtime_CONFIG_UUT_PARAM_CHECK;
 
