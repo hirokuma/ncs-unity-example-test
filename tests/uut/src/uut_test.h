@@ -4,8 +4,8 @@
  * SPDX-License-Identifier: LicenseRef-Nordic-5-Clause
  */
 
-#ifndef EXAMPLE_TEST_H_
-#define EXAMPLE_TEST_H_
+#ifndef UUT_TEST_H_
+#define UUT_TEST_H_
 
 #include <zephyr/sys/util.h>
 #include <stdbool.h>
@@ -24,4 +24,4 @@
 
 extern bool runtime_CONFIG_UUT_PARAM_CHECK;
 
-#endif /* EXAMPLE_TEST_H_ */
+#endif /* UUT_TEST_H_ */

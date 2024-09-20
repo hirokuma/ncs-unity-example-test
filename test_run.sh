@@ -1,3 +1,6 @@
-#!/bin/sh
+#!/bin/sh -eu
 
-west build -b native_posix_64 -t run -d ./build-tests $@ -- -DCACHED_CONF_FILE=./tests/prj_test.conf
+cd tests
+cd uut; west build -b native_sim_64 -t run  $@; cd ..
+cd foo; west build -b native_sim_64 -t run  $@; cd ..
+cd ..

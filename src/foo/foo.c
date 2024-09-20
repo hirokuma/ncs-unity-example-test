@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: LicenseRef-Nordic-5-Clause
  */
 
-#include <foo/foo.h>
+#include "foo.h"
 
 int foo_init(void *handle)
 {
