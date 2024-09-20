@@ -2,6 +2,6 @@ tests:
   unity.example_test:
     tags: example
     integration_platforms:
-      - native_posix
+      - native_posix_64
     platform_allow:
-      - native_posix
+      - native_posix_64
