@@ -1,5 +1,16 @@
 # ncs-unity-example-test
 
+## Prepare
+
+Install nRF Connect SDK and nRF Connect for VS Code.
+
+* ncs: v2.6.1
+* toolchain: v2.6.1
+
+Run scripts in "nRF Connect" Terminal.
+
+![image](image.png)
+
 ## Run
 
 ```console
